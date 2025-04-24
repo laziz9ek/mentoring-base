@@ -1,84 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="app.component.scss">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <title>Document</title>
-</head>
-<body>
+
+<!-- div.nav-menu>nav#top-nav-bar.top-nav-bar>ul.navbar-left>li*4.nav-items>button.nav-btn> -->
+<header class="header">
   
-  <header class="header">
-    <nav class="top-bar">
+  <div class="nav-menu">
+    <nav id="top-nav-bar" class="top-nav-bar">
+      <ul class="top-navbar-left">
+        <li class="nav-items">
+          <img src="../assets/logo.svg" alt="Logo">
+        </li>
+        <li class="nav-items"><button *ngIf="isShowCatalog" class="nav-btn top-nav-btn">{{topHeaderBarItem1}}</button></li>
+        <li class="nav-items"><button *ngIf="isShowCatalog" class="nav-btn top-nav-btn">{{aboutCompany}}</button></li>
+        <li class="nav-items"><button *ngIf="isShowCatalog" class="nav-btn top-nav-btn">{{catalog}}</button></li>
+        <button (click)="isShowCatalog = !isShowCatalog" style="border: 2px solid silver;">
+          {{text}}
+        </button>
+        <button (click)="changeMenuText()" style="border: 2px solid silver;">
+          Изменить текст
+        </button>
+        
+      </ul>
 
-      <section class="top-bar-left">
-        <ul class="nav-list">
-          <li class="top-nav-item">
-            <img src="../assets/Frame.svg" alt="Logo">
-          </li>
-          <li class="top-nav-item"><a href="#">Главная</a></li>
-          <li class="top-nav-item"><a href="#">О компании</a></li>
-          <li class="top-nav-item"><a href="#">Каталог</a></li>
-        </ul>
-      </section>
-
-      <section class="top-bar-right">
-        <ul class="nav-list">
-          <li class="top-nav-item">
-            <a href="#" class="top_header_phone_icon">
-              <img src="../assets/phone.svg" class="phone_icon" alt="">
-              <span>+7 (965) 084-29-29</span>
-            </a>
-          </li>
-          <li class="top-nav-item"><a href="#" class="favorite"><img src="../assets/favorite.svg" alt=""></a></li>
-          <li class="top-nav-item">
-            <button class="order_card" href="#">
-              <img alt="" src="../assets/card.svg">
-              <span>Пусто</span>
-            </button>
-          </li>
-        </ul>
-      </section>
+      <ul class="top-navbar-right">
+        <li class="nav-items">
+          <button class="nav-btn top-nav-btn" href="tel:+7 (965) 084-29-29">
+            <img src="../assets/phone.svg" class="phon-icon" alt="Call">
+            <span>{{phoneNumber}}</span>
+          </button>
+        </li>
+        <li class="nav-items">
+          <button class="nav-btn top-nav-btn favorite-icon">
+            <img src="../assets/favorite.svg" alt="Favorite">
+          </button>
+        </li>
+        <li class="nav-items">
+          <button class="nav-btn top-nav-btn order-card">
+            <img src="../assets/card.svg" alt="Card" >
+            <span>{{orderBtn}}</span>
+          </button>
+        </li>
+      </ul>
     </nav>
 
-    <nav class="bottom-bar">
-      <section class="bottom-bar-left">
-        <ul class="nav-list">
-          <li class="bottom-nav-item">
-            <a href="#">
-              <img src="../assets/menu.svg" alt="">
-            </a>
-          </li>
-          <li class="bottom-nav-item"><a href="#">Каталог</a></li>
-          <li class="bottom-nav-item"><a href="#">Стройматериалы</a></li>
-          <li class="bottom-nav-item"><a href="#">Инструменты</a></li>
-          <li class="bottom-nav-item"><a href="#">Электрика</a></li>
-          <li class="bottom-nav-item"><a href="#">Интерьер и одежда</a></li>
-        </ul>
-      </section>
-      <section class="bottom-bar-right">
-        <ul class="nav-list">
-          <li class="bottom-nav-item">
-            <form>
-              <input type="text" class="search-input icon" value placeholder="Поиск, например Круг зачистной">
-            </form>
-          </li>
-          <li class="bottom-nav-item">
-            <a href="#" class="bottom_header_location_icon">
-              <img src="../assets/location.svg" class="location_icon" alt="">
-              <span>Москва</span>
-            </a>
-          </li>
-        </ul>
-      </section>
+    <nav id="bottom-nav-bar" class="bottom-nav-bar">
+      <ul class="bottom-navbar-left">
+        <li class="nav-items">
+          <button class="nav-btn bottom-nav-btn">
+            <img src="../assets/menu.svg" alt="Menu">
+          </button>
+        </li>
+        <li class="nav-items">
+          <button class="nav-btn bottom-nav-btn">{{bottomHeaderBarItem1}}</button>
+        </li>
+        <li class="nav-items">
+          <button class="nav-btn bottom-nav-btn">{{bottomHeaderBarItem2}}</button>
+        </li>
+        <li class="nav-items">
+          <button class="nav-btn bottom-nav-btn">{{bottomHeaderBarItem3}}</button>
+        </li>
+        <li class="nav-items">
+          <button class="nav-btn bottom-nav-btn">{{bottomHeaderBarItem4}}</button>
+        </li>
+        <li class="nav-items">
+          <button class="nav-btn bottom-nav-btn">{{bottomHeaderBarItem5}}</button>
+        </li>
+      </ul>
+      <ul class="bottom-navbar-right">
+        <li class="nav-items">
+          <form class="nav-search-form">
+            <input type="search" class="search-input" value placeholder="Поиск, например Круг зачистной">
+          </form>
+        </li>
+        <li class="nav-items">
+          <button class="nav-btn bottom-nav-btn btn-location">
+            <img src="../assets/location.svg" alt="Location" class="location">
+            <span>{{location}}</span>
+          </button>
+        </li>
+      </ul>
     </nav>
-    <div>
-      <img src="../assets/Rectangle.png" alt="">
+  </div>
+  
+
+
+  <div class="header-banner">
+    <div class="banner" *ngIf="isShowBanner"> 
+      <img class="banner-img" src="../assets/main-banner.png" alt="">  
     </div>
-  </header>
+    <button (click)="isShowBanner = !isShowBanner" style="border: 2px solid silver;">
+    {{text}}
+    </button>
+  </div>
 
-</body>
-</html>
+   
+</header>
+
+<section class="section section-one">
+  <div class="wraper-section-one">
+    <div class="info-block">
+      <img src="../assets/buildBlock.svg" alt="">
+      <div class="section-one-item">
+       <span>Большой ассортимент</span>
+       строительных материалов всегда в наличии
+      </div>
+    </div>
+    <div class="info-block">
+      <img src="../assets/delivery.svg" alt="">
+      <div class="section-one-item">
+        <span>Доставка стройматериалов</span>
+        в течении четырех часов или в любое удобное время
+      </div>
+    </div>
+    <div class="info-block">
+      <img src="../assets/like.svg" alt="">
+      <div class="section-one-item">
+        <span>Многоуровневая система</span>
+        управления качеством по стандарту ISO 9001
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+ 
+
+
+
+<section>
+  <div class="pages">
+    <button 
+      *ngFor="let item of newPages" 
+      class="button-page-list active-button">{{item}}</button>
+  </div>
+</section>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
