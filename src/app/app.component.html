@@ -4,6 +4,8 @@
   
   <div class="nav-menu">
     <nav id="top-nav-bar" class="top-nav-bar">
+
+      <!-- Top Hader Left -->
       <ul class="top-navbar-left">
         <li class="nav-items">
           <img src="../assets/logo.svg" alt="Logo">
@@ -16,10 +18,10 @@
         </button>
         <button (click)="changeMenuText()" style="border: 2px solid silver;">
           Изменить текст
-        </button>
-        
+        </button>  
       </ul>
-
+    
+    <!-- Top Hader Right -->
       <ul class="top-navbar-right">
         <li class="nav-items">
           <button class="nav-btn top-nav-btn" href="tel:+7 (965) 084-29-29">
@@ -42,6 +44,8 @@
     </nav>
 
     <nav id="bottom-nav-bar" class="bottom-nav-bar">
+
+      <!-- Bottom Hader Left -->
       <ul class="bottom-navbar-left">
         <li class="nav-items">
           <button class="nav-btn bottom-nav-btn">
@@ -49,21 +53,11 @@
           </button>
         </li>
         <li class="nav-items">
-          <button class="nav-btn bottom-nav-btn">{{bottomHeaderBarItem1}}</button>
-        </li>
-        <li class="nav-items">
-          <button class="nav-btn bottom-nav-btn">{{bottomHeaderBarItem2}}</button>
-        </li>
-        <li class="nav-items">
-          <button class="nav-btn bottom-nav-btn">{{bottomHeaderBarItem3}}</button>
-        </li>
-        <li class="nav-items">
-          <button class="nav-btn bottom-nav-btn">{{bottomHeaderBarItem4}}</button>
-        </li>
-        <li class="nav-items">
-          <button class="nav-btn bottom-nav-btn">{{bottomHeaderBarItem5}}</button>
+          <button class="nav-btn bottom-nav-btn" *ngFor="let item of menuItems">{{item}}</button>
         </li>
       </ul>
+
+      <!-- Bottom Hader Right -->
       <ul class="bottom-navbar-right">
         <li class="nav-items">
           <form class="nav-search-form">
@@ -78,6 +72,7 @@
         </li>
       </ul>
     </nav>
+
   </div>
   
 
