@@ -1,11 +1,9 @@
 
-<!-- div.nav-menu>nav#top-nav-bar.top-nav-bar>ul.navbar-left>li*4.nav-items>button.nav-btn> -->
 <header class="header">
   
   <div class="nav-menu">
     <nav id="top-nav-bar" class="top-nav-bar">
 
-      <!-- Top Hader Left -->
       <ul class="top-navbar-left">
         <li class="nav-items">
           <img src="../assets/logo.svg" alt="Logo">
@@ -21,13 +19,12 @@
         </button>  
       </ul>
     
-    <!-- Top Hader Right -->
       <ul class="top-navbar-right">
         <li class="nav-items">
-          <button class="nav-btn top-nav-btn" href="tel:+7 (965) 084-29-29">
+          <a class="nav-btn top-nav-btn" href="mailto:+7 (965) 084-29-29">
             <img src="../assets/phone.svg" class="phon-icon" alt="Call">
             <span>{{phoneNumber}}</span>
-          </button>
+          </a>
         </li>
         <li class="nav-items">
           <button class="nav-btn top-nav-btn favorite-icon">
@@ -44,8 +41,6 @@
     </nav>
 
     <nav id="bottom-nav-bar" class="bottom-nav-bar">
-
-      <!-- Bottom Hader Left -->
       <ul class="bottom-navbar-left">
         <li class="nav-items">
           <button class="nav-btn bottom-nav-btn">
@@ -57,7 +52,6 @@
         </li>
       </ul>
 
-      <!-- Bottom Hader Right -->
       <ul class="bottom-navbar-right">
         <li class="nav-items">
           <form class="nav-search-form">
@@ -75,8 +69,6 @@
 
   </div>
   
-
-
   <div class="header-banner">
     <div class="banner" *ngIf="isShowBanner"> 
       <img class="banner-img" src="../assets/main-banner.png" alt="">  
@@ -85,8 +77,7 @@
     {{text}}
     </button>
   </div>
-
-   
+ 
 </header>
 
 <section class="section section-one">
@@ -115,13 +106,6 @@
   </div>
 </section>
 
-
-
-
- 
-
-
-
 <section>
   <div class="pages">
     <button 
@@ -129,6 +113,3 @@
       class="button-page-list active-button">{{item}}</button>
   </div>
 </section>
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>

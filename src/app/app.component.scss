@@ -1,17 +1,4 @@
 
-/** Colors
- * 1. #3C3C3B Black, Text
- * 2. #A1A0A0 Silver, Second Text
- * 3. #F0BA4E Orange, Second color
- * 4. #FA5D69 Soft pink, Discount
- * 5. #08C785 Green, News
- */
-
-
-/* Start Nav Section
-     ========================================================================== */
-
-
 .nav-menu {
     display: flex;
     flex-direction: column;
@@ -41,9 +28,9 @@
 
 .nav-btn {
     display: inline-flex;
-    justify-content: center;     /* center the content horizontally */
-    align-items: center;        /* center the content vertically */
-    border-color: transparent; /* hide button border */
+    justify-content: center;
+    align-items: center;
+    border-color: transparent;
     padding: 0;
 }
 
@@ -127,11 +114,6 @@
     height: 12px;
 }
 
-
-/*  End Nav Section
-     ========================================================================== 
-    Start Header Banner Section */
-
 .header-banner {
     display: inline-block;
     overflow: hidden;
@@ -148,28 +130,15 @@
     background-image: linear-gradient(to right, Silver, transparent);
     opacity: 0.5;
 }
-img.banner-img {
-        /* Set rules to fill background */
+.banner-img {
     min-height: 100%;
-    min-width: 1024px;
-          
-        /* Set up proportionate scaling */
+    min-width: 1024px;  
     width: 100%;
-    height: 720px;
-          
-        /* Set up positioning */
+    height: 720px;  
     top: 128px;
     left: 0;
     z-index: -2;
 }
-     
-
-/*  End Header Banner Section
-     ========================================================================== 
-    Start Info Block Section */
-
-// section section-one info-item-block
-
 
 .section {
     display: flex;
@@ -208,25 +177,6 @@ img.banner-img {
     font-weight: bold;
 }
 
-
-
-
-
-
-
-
-/*  End Info Block Section
-     ========================================================================== 
-    Start categories of item Section */
-
-
-
-
-
-
-
-
-
     .pages {
         display: flex;
         justify-content: flex-end;
@@ -234,18 +184,6 @@ img.banner-img {
     
     
     
-    
-    
-    // .nav-menu {
-    //     display: flex;
-    //     flex-direction: column;
-    //     height: 128px;
-    //     color: white;
-    //     padding: 0 145px;   
-    // }
-
-
-
 
 
 

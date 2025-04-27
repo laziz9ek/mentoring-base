@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 const menuItems: string[] = ['Каталог', 'Стройматериалы', 'Инструменты', 'Электрика', 'Интерьер и одежда'];
-
 const upperCaseMenuItems: string[] = menuItems.map(
   (item) => {
     return item.toUpperCase();
@@ -32,7 +31,6 @@ export class AppComponent {
   readonly catalog = 'Каталог';
   readonly orderBtn = 'Пусто';
   readonly phoneNumber = '+7 (965) 084-29-29';
-
   readonly header2Item1 = upperCaseMenuItems[0];
   readonly bottomHeaderBarItem2 = menuItems[1];
   readonly bottomHeaderBarItem3 = 'Инструменты';
@@ -42,7 +40,6 @@ export class AppComponent {
 
   menuItems: string[] = upperCaseMenuItems;
   newPages: number[] = newPages;
-
   isUpperCase = true;
 
   changeMenuText() {
@@ -51,8 +48,5 @@ export class AppComponent {
     )
     this.isUpperCase = !this.isUpperCase;
   }
-
-  
-
 
 }
