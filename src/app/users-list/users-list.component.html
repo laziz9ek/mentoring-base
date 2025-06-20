@@ -1,0 +1,10 @@
+<div class="wrap-user-content container">
+    <div *ngFor="let item of users" class="user-item">
+        <app-user-card [user]="item" (deleteUser)="deleteUser($event)"></app-user-card>
+    </div>
+</div>
+
+
+
+
+

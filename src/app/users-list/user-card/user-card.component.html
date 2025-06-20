@@ -1,0 +1,6 @@
+<h1 class="user-name">{{user.name}}</h1>
+<p class="user-card-item"> {{user.username}} </p>
+<p class="user-card-item"> {{user.email}} </p>
+<p class="user-card-item"> {{user.website}} </p>
+<p class="user-card-item"> {{user.company.name}} </p>
+<button (click)="onDeleteUser(user.id)" type="button" class="delete-users-button">Delete user</button>

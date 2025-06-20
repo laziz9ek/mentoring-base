@@ -1,0 +1,112 @@
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    height: 128px;
+    color: white;   
+}
+
+#top-nav-bar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4B565E;
+}
+
+.top-navbar-left, .top-navbar-right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    color: #fff;
+}
+.top-navbar-left, .top-navbar-right, .bottom-navbar-left, .bottom-navbar-right  {
+    padding: 0;
+}
+
+.nav-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-color: transparent;
+    padding: 0;
+}
+
+.top-nav-btn {
+    color: #fff;
+}
+
+.phon-icon {
+    padding-right: 30px;
+}
+.favorite-icon {
+    width: 24px;
+    height: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.order-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width:126px;
+    height:48px;
+    padding: 10px 20px;
+    color:#fff;
+    font-size:15px;
+    border: 1px solid #F0BA4E;
+    border-width:1px;
+    border-radius:28px;
+    background-color: transparent;
+}
+
+#bottom-nav-bar {
+    height: 48px;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    color: #3C3C3B;
+    background-color: #F0BA4E;
+    font-size: 14px;
+    margin: 0;
+}
+
+.bottom-navbar-left, .bottom-navbar-right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+
+.bottom-nav-btn {
+    color: #3C3C3B;
+}
+
+.search-input {
+    height: 28px;
+    width: 400px;
+    box-sizing: border-box;
+    border-color: #3C3C3B;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: transparent;
+    background: url("../../assets/search.svg") no-repeat right;
+    background-size: 24px;
+    padding-right: 25px;
+}
+
+.search-input:focus {
+    outline: none;
+}
+.btn-location {
+    gap: 4px;
+}
+.location {
+    width: 12px;
+    height: 12px;
+}

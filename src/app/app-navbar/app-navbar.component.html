@@ -1,0 +1,66 @@
+<div class="nav-menu">
+    <nav id="top-nav-bar" class="top-nav-bar container">
+      <ul class="top-navbar-left">
+        <li class="nav-items">
+          <img src="../../assets/logo.svg" alt="Logo">
+        </li>
+        <li class="nav-items"><button *ngIf="isShowCatalog" class="nav-btn top-nav-btn">{{topHeaderBarItem1}}</button></li>
+        <li class="nav-items"><button *ngIf="isShowCatalog" class="nav-btn top-nav-btn">{{aboutCompany}}</button></li>
+        <li class="nav-items"><button *ngIf="isShowCatalog" class="nav-btn top-nav-btn">{{catalog}}</button></li>
+        <li class="nav-items"><button routerLink="users" class="nav-btn top-nav-btn">{{users}}</button></li>
+        <button (click)="isShowCatalog = !isShowCatalog" style="border: 2px solid silver;">
+          {{text}}
+        </button>
+        <button (click)="changeMenuText()" style="border: 2px solid silver;">
+          Изменить текст
+        </button>  
+      </ul>
+      
+      <ul class="top-navbar-right">
+        <li class="nav-items">
+          <a class="nav-btn top-nav-btn" href="mailto:+7 (965) 084-29-29">
+            <img src="../../assets/phone.svg" class="phon-icon" alt="Call">
+            <span>{{phoneNumber}}</span>
+          </a>
+        </li>
+        <li class="nav-items">
+          <button class="nav-btn top-nav-btn favorite-icon">
+            <img src="../../assets/favorite.svg" alt="Favorite">
+          </button>
+        </li>
+        <li class="nav-items">
+          <button class="nav-btn top-nav-btn order-card">
+            <img src="../../assets/card.svg" alt="Card" >
+            <span>{{orderBtn}}</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <nav id="bottom-nav-bar" class="bottom-nav-bar container">
+      <ul class="bottom-navbar-left">
+        <li class="nav-items">
+          <button class="nav-btn bottom-nav-btn">
+            <img src="../../assets/menu.svg" alt="Menu">
+          </button>
+        </li>
+        <li class="nav-items">
+          <button class="nav-btn bottom-nav-btn" *ngFor="let item of menuItems">{{item}}</button>
+        </li>
+      </ul>
+
+      <ul class="bottom-navbar-right">
+        <li class="nav-items">
+          <form class="nav-search-form">
+            <input type="search" class="search-input" value placeholder="Поиск, например Круг зачистной">
+          </form>
+        </li>
+        <li class="nav-items">
+          <button class="nav-btn bottom-nav-btn btn-location">
+            <img src="../../assets/location.svg" alt="Location" class="location">
+            <span>{{location}}</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>

@@ -1,75 +1,13 @@
 
+
+<router-outlet>
+  <app-navbar></app-navbar>
+</router-outlet>
+
+
 <header class="header">
-  
-  <div class="nav-menu">
-    <nav id="top-nav-bar" class="top-nav-bar">
 
-      <ul class="top-navbar-left">
-        <li class="nav-items">
-          <img src="../assets/logo.svg" alt="Logo">
-        </li>
-        <li class="nav-items"><button *ngIf="isShowCatalog" class="nav-btn top-nav-btn">{{topHeaderBarItem1}}</button></li>
-        <li class="nav-items"><button *ngIf="isShowCatalog" class="nav-btn top-nav-btn">{{aboutCompany}}</button></li>
-        <li class="nav-items"><button *ngIf="isShowCatalog" class="nav-btn top-nav-btn">{{catalog}}</button></li>
-        <button (click)="isShowCatalog = !isShowCatalog" style="border: 2px solid silver;">
-          {{text}}
-        </button>
-        <button (click)="changeMenuText()" style="border: 2px solid silver;">
-          Изменить текст
-        </button>  
-      </ul>
-    
-      <ul class="top-navbar-right">
-        <li class="nav-items">
-          <a class="nav-btn top-nav-btn" href="mailto:+7 (965) 084-29-29">
-            <img src="../assets/phone.svg" class="phon-icon" alt="Call">
-            <span>{{phoneNumber}}</span>
-          </a>
-        </li>
-        <li class="nav-items">
-          <button class="nav-btn top-nav-btn favorite-icon">
-            <img src="../assets/favorite.svg" alt="Favorite">
-          </button>
-        </li>
-        <li class="nav-items">
-          <button class="nav-btn top-nav-btn order-card">
-            <img src="../assets/card.svg" alt="Card" >
-            <span>{{orderBtn}}</span>
-          </button>
-        </li>
-      </ul>
-    </nav>
-
-    <nav id="bottom-nav-bar" class="bottom-nav-bar">
-      <ul class="bottom-navbar-left">
-        <li class="nav-items">
-          <button class="nav-btn bottom-nav-btn">
-            <img src="../assets/menu.svg" alt="Menu">
-          </button>
-        </li>
-        <li class="nav-items">
-          <button class="nav-btn bottom-nav-btn" *ngFor="let item of menuItems">{{item}}</button>
-        </li>
-      </ul>
-
-      <ul class="bottom-navbar-right">
-        <li class="nav-items">
-          <form class="nav-search-form">
-            <input type="search" class="search-input" value placeholder="Поиск, например Круг зачистной">
-          </form>
-        </li>
-        <li class="nav-items">
-          <button class="nav-btn bottom-nav-btn btn-location">
-            <img src="../assets/location.svg" alt="Location" class="location">
-            <span>{{location}}</span>
-          </button>
-        </li>
-      </ul>
-    </nav>
-
-  </div>
-  
-  <div class="header-banner">
+  <div class="header-banner full-width">
     <div class="banner" *ngIf="isShowBanner"> 
       <img class="banner-img" src="../assets/main-banner.png" alt="">  
     </div>
@@ -80,7 +18,7 @@
  
 </header>
 
-<section class="section section-one">
+<section class="section section-one container">
   <div class="wraper-section-one">
     <div class="info-block">
       <img src="../assets/buildBlock.svg" alt="">
@@ -106,10 +44,216 @@
   </div>
 </section>
 
-<section>
+<div class="pagessite section container">
   <div class="pages">
     <button 
       *ngFor="let item of newPages" 
-      class="button-page-list active-button">{{item}}</button>
+      class="button-page-list active-button">
+        {{item}}
+    </button>
   </div>
+</div>
+
+<br><br><br><br>
+
+<section class="product-classes container">
+  
+  <div class="item-classes-pesko-struy shadowing">
+    <div class="item-title">
+      <p>Строительный отделочный инструмент</p>
+    </div>
+      <div class="pesko-struy">
+        <img src="../assets/pesko-struy.svg" alt="">
+      </div>
+      <button class="arrow-katalog btn-pesko-struy">
+        Перейти в каталог
+      </button>
+  </div>
+
+ 
+  <div class="kategoriy-emals shadowing">
+      <div class="item-title emals">
+        <p>Эмали</p>
+      </div>
+      <div class="emals">
+        <img src="../assets/emals.svg" alt="">
+      </div>
+      <button class="arrow-katalog btn-emals">
+        Перейти в каталог
+      </button>
+  </div>
+
+    <div class="kategoriy-paint shadowing">
+      <div class="item-title paint">
+        <p>Лакокрасочные материалы</p>
+      </div>
+      <div class="paint-img">
+        <img src="../assets/paint.svg" alt="">
+      </div>
+      <button class="arrow-katalog btn-paint">
+        Перейти в каталог
+      </button>
+    </div>
+
+    <div class="kategoriy-glu shadowing">
+      <div class="item-title klei">
+        <p>Пены, клеи и <span> герметики </span></p>
+      </div>
+      <div class="glu">
+        <img src="../assets/glu.svg" alt="">
+      </div>
+      <button class="arrow-katalog btn-glu">
+        Перейти в каталог
+      </button>
+    </div>
+
+    <div class="kategoriy-rozetka shadowing">
+      <div class="item-title rozetka">
+        <p>Розетки и выключатели</p>
+      </div>
+      <div class="rozetka-img">
+        <img src="../assets/rozetka.svg" alt="">
+      </div>
+      <button class="arrow-katalog btn-rozetka">
+        Перейти в каталог
+      </button>
+    </div>
+
 </section>
+<br><br><br><br>
+<section class="section section-popular container">
+<div class="wraper-popular">
+  <div class="popular-section-title">
+    <p>Популярные товары</p>
+    <a>Посмотреть все товары</a>
+  </div>
+
+  <div class="card-wrapper">
+
+    <div class="popular-card shadowing">
+      <div class="imges">
+        <div class="image-title">
+          <button class="porsent" style="float: left;">%</button>
+          <button class="heart" style="float: right;"></button>
+        </div>
+      </div>
+
+      <div class="card-content">
+        <div class="product-name">
+          Круг зачистной 125х6х22
+          <span>Артикул 00004</span>
+        </div>
+        <div class="cost">
+          <p>Цена за штуку</p> 
+          <div>52 руб.</div><span>48 руб.</span>
+        </div>
+      </div>
+
+      <div class="order-btn">
+        <div class="col">
+          <p>Количество </p> 
+          <button class="counter">-</button><span>1</span><button class="counter">+</button>
+        </div>
+        <div class="add-to-card">
+          <button class="order-card-btn">В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popular-card shadowing">
+      <div class="imges">
+        <div class="image-title">
+          <button class="porsent" style="float: left;">%</button>
+          <button class="heart" style="float: right;"></button>
+        </div>
+      </div>
+
+      <div class="card-content">
+        <div class="product-name">
+          Круг зачистной 125х6х22
+          <span>Артикул 00004</span>
+        </div>
+        <div class="cost">
+          <p>Цена за штуку</p> 
+          <div>52 руб.</div><span>48 руб.</span>
+        </div>
+      </div>
+
+      <div class="order-btn">
+        <div class="col">
+          <p>Количество </p> 
+          <button class="counter">-</button><span>1</span><button class="counter">+</button>
+        </div>
+        <div class="add-to-card">
+          <button class="order-card-btn">В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popular-card shadowing">
+      <div class="imges">
+        <div class="image-title">
+          <button class="porsent" style="float: left;">%</button>
+          <button class="heart" style="float: right;"></button>
+        </div>
+      </div>
+
+      <div class="card-content">
+        <div class="product-name">
+          Круг зачистной 125х6х22
+          <span>Артикул 00004</span>
+        </div>
+        <div class="cost">
+          <p>Цена за штуку</p> 
+          <div>52 руб.</div><span>48 руб.</span>
+        </div>
+      </div>
+
+      <div class="order-btn">
+        <div class="col">
+          <p>Количество </p> 
+          <button class="counter">-</button><span>1</span><button class="counter">+</button>
+        </div>
+        <div class="add-to-card">
+          <button class="order-card-btn">В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popular-card shadowing">
+      <div class="imges">
+        <div class="image-title">
+          <button class="porsent" style="float: left;">%</button>
+          <button class="heart" style="float: right;"></button>
+        </div>
+      </div>
+
+      <div class="card-content">
+        <div class="product-name">
+          Круг зачистной 125х6х22
+          <span>Артикул 00004</span>
+        </div>
+        <div class="cost">
+          <p>Цена за штуку</p> 
+          <div>52 руб.</div><span>48 руб.</span>
+        </div>
+      </div>
+
+      <div class="order-btn">
+        <div class="col">
+          <p>Количество </p> 
+          <button class="counter">-</button><span>1</span><button class="counter">+</button>
+        </div>
+        <div class="add-to-card">
+          <button class="order-card-btn">В корзину</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+<router-outlet></router-outlet>
